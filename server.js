@@ -18,6 +18,9 @@ app.use(
 //cors
 app.use(cors());
 
+//use routes
+require("./api/routes")(app);
+
 //request to see if the endpoint works
 app.get("/", (req, res) => {
     return res.send(process.env.API_WORKS_MESSAGE);
@@ -34,10 +37,7 @@ app.use((req, res) => {
 });
 
 //Database connection
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
-const db = mongoose.connection;
-db.on("error", (error) => console.log(error));
-db.on("open", () => console.log("connected to database"));
+require("./config/db");
 
 //port settings
 const port = process.env.NODE_PORT || 8080;

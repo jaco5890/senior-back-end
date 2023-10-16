@@ -1,0 +1,61 @@
+### get all employees
+GET http://localhost:3000/employees
+authorization: auth_token_234VJFl6q3ztXKnap
+
+
+### get employee by id
+GET http://localhost:3000/employees/652d7c398bebec04d7a1f2cf
+
+### add new employee
+POST http://localhost:3000/employees
+Content-Type: application/json
+authorization: auth_token_234VJFl6q3ztXKnap
+
+{
+    "basicInformation": {
+        "firstName": "jaco",
+        "lastName": "van der merwe",
+        "contactNumber": "0748904346",
+        "email": "jacovandermerwe@gmail.com",
+        "birthday": "1997-11-03"
+    },
+    "addressInformation": {
+        "streetAddress": "test street 1",
+        "city": "pretoria",
+        "postalCode": 4580,
+        "country": "South Africa"
+    },
+    "skills": [{
+        "skill": "angular",
+        "yearsExperience": 3,
+        "seniority": "senior"
+    }]
+}
+
+### delete employee by id
+DELETE http://localhost:3000/employees/652d7c398bebec04d7a1f2cf
+
+### update employee
+PATCH http://localhost:3000/employees/652d7df1ad7203205b029004
+Content-Type: application/json
+
+{
+    "basicInformation": {
+        "firstName": "jaco",
+        "lastName": "van der merwe",
+        "contactNumber": "0748904346",
+        "email": "jacovandermerwe@gmail.com",
+        "birthday": "1992-11-03"
+    },
+    "addressInformation": {
+        "streetAddress": "test street 5",
+        "city": "pretoria",
+        "postalCode": 4580,
+        "country": "South Africa"
+    },
+    "skills": [{
+        "skill": "angular",
+        "yearsExperience": 3,
+        "seniority": "junior"
+    }]
+}

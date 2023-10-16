@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "Employee management node js project",
   "main": "index.js",
+  "engines": {
+    "node": "20.2.0"
+  },
   "scripts": {
+    "start": "node server.js",
     "devStart": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

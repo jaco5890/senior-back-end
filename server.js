@@ -18,6 +18,9 @@ app.use(
 //cors
 app.use(cors());
 
+//use routes
+require("./api/routes")(app);
+
 //request to see if the endpoint works
 app.get("/", (req, res) => {
     return res.send(process.env.API_WORKS_MESSAGE);

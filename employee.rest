@@ -9,6 +9,7 @@ GET http://localhost:3000/employees/652d7c398bebec04d7a1f2cf
 ### add new employee
 POST http://localhost:3000/employees
 Content-Type: application/json
+authorization: auth_token_234VJFl6q3ztXKnap
 
 {
     "basicInformation": {

@@ -11,11 +11,11 @@ The employee example app contains the very basics of how to work with mongo db a
 The app demonstrates the following
   1. Get all employees.
   2. Get single employee.
-  3. Create employee
-  4. Update employee
-  5. Delete employee
-  6. Generate ID for each employee
-  7. Token validation
+  3. Create employee.
+  4. Update employee.
+  5. Delete employee.
+  6. Generate ID for each employee.
+  7. Token validation.
 
 ## Requirements
 

@@ -3,7 +3,7 @@
 The employee example app contains the very basics of how to work with mongo db and express:
 
 - Basic CRUD APIs
-- Employee
+- Employee model
 - Mongo db on atlas
 - Basic authentication with hard coded token
 - Field validations

@@ -1,44 +1,47 @@
-## node.js employee app
+# Project Support
 
-The employee example app contains the very basics of how to work with mongo db and express:
+### Introduction
 
-- Basic CRUD APIs
-- Employee model
-- Mongo db on atlas
-- Basic authentication with hard coded token
-- Field validations
+This is a simple node js project that enables user to create new employees, view all employees, view a single employee,
+update an employee and delete an employee.
+Very basic authorization has been implemented on each API to check if the user has passed through the required token
 
-The app demonstrates the following
-  1. Get all employees.
-  2. Get single employee.
-  3. Create employee.
-  4. Update employee.
-  5. Delete employee.
-  6. Generate ID for each employee.
-  7. Token validation.
+### Project Support Features
 
-## Requirements
+- Employee management
+- Field validation
+- Random User ID generator
+- Token validator
+- Connect to local db instance
+- Connect to development db on atlas
 
-* >= Node 20
-* Mongoose db setup
+### Installation Guide
 
-## Common setup
+- Clone this repository [here](https://github.com/jaco5890/senior-back-end.git).
+- The develop branch is the most stable branch at any given time, ensure you're working from it.
+- Run npm install to install all dependencies
+- You can either work with the default database on atlas or use your locally installed MongoDB. Do configure to your choice in the server.js entry file.
+- Create an .env file in your project root folder and add your variables. See .env for assistance.
 
-Clone the repo and install the dependencies.
+### Usage
 
-```bash
-git clone
-cd senior-back-end
-```
+- Run npm devStart to start the application.
+- Connect to the API using Postman on port 3000.
 
-```bash
-npm install
-```
+### API Endpoints
 
-## Steps for for running
+| HTTP Verbs | Endpoints            | Action                                 |
+| ---------- | -------------------- | -------------------------------------- |
+| GET        | /employees           | To retrieve all employees              |
+| GET        | /employees/:id       | To retrieve a single employee          |
+| POST       | /employees           | To create a new employee               |
+| PATCH      | /employees/:id       | To update an employee                  |
+| DELETE     | /employees/:id       | To delete a single employee               |
 
-To start the express server, run the following
+### Technologies Used
 
-```bash
-npm run devStart
-```
+- [NodeJS](https://nodejs.org/) This is a cross-platform runtime environment built on Chrome's V8 JavaScript engine used in running JavaScript codes on the server. It allows for installation and managing of dependencies and communication with databases.
+- [ExpressJS](https://www.expresjs.org/) This is a NodeJS web application framework.
+- [MongoDB](https://www.mongodb.com/) This is a free open source NOSQL document database with scalability and flexibility. Data are stored in flexible JSON-like documents.
+- To start your mongo instance run brew services start mongodb-community@7.0
+- To stop your mongo instance run brew services stop mongodb-community@7.0

@@ -11,6 +11,14 @@
     "devStart": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaco5890/senior-back-end.git"
+  },
+  "keywords": [
+    "node",
+    "starter"
+  ],
   "author": "jaco",
   "license": "ISC",
   "dependencies": {

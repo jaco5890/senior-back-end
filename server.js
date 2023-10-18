@@ -3,7 +3,6 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
 
 const app = express();
 
@@ -36,9 +35,14 @@ app.use((req, res) => {
     res.status(404).send("<h2 align=center>Page Not Found!</h2>");
 });
 
-//Database connection
-require("./config/db");
+//Database connection to hosted db
+//require("./config/db");
+
+//Database connection for local instance
+require("./config/db_local");
 
 //port settings
-const port = process.env.NODE_PORT || 8080;
+const port = process.env.PORT || 3000;
 app.listen(port, () => console.log("server has started"));
+
+module.exports = app;

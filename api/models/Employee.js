@@ -56,7 +56,7 @@ const employeeSchema = new mongoose.Schema({
         required: true,
       },
       yearsExperience: {
-        type: String,
+        type: Number,
         required: true,
       },
       seniority: {

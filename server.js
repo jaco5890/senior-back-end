@@ -27,7 +27,6 @@ app.get("/", (req, res) => {
 
 // request to handle undefined or all other routes
 app.get("*", (req, res) => {
-    console.log("undefined request")
     res.send(process.env.API_WORKS_MESSAGE);
 });
 

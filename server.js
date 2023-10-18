@@ -44,3 +44,5 @@ require("./config/db_local");
 //port settings
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log("server has started"));
+
+module.exports = app;

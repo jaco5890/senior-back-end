@@ -95,7 +95,6 @@ router.delete("/:id", validateToken, getEmployee, async (request, response) => {
     await response.employee.deleteOne();
     Success(response, []);
   } catch (err) {
-    console.log(err, "ERROR");
     InternalServerError(response, err);
   }
 });

@@ -2,7 +2,6 @@ const Validator = require("validator");
 const isEmpty = require("./is-empty");
 
 module.exports = function validateEmployee(data) {
-  console.log(data.basicInformation, 'DATA')
   let errors = [];
   //basic information
   data.basicInformation.firstName = !isEmpty(data.basicInformation.firstName)

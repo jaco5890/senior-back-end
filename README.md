@@ -43,5 +43,9 @@ Very basic authorization has been implemented on each API to check if the user h
 - [NodeJS](https://nodejs.org/) This is a cross-platform runtime environment built on Chrome's V8 JavaScript engine used in running JavaScript codes on the server. It allows for installation and managing of dependencies and communication with databases.
 - [ExpressJS](https://www.expresjs.org/) This is a NodeJS web application framework.
 - [MongoDB](https://www.mongodb.com/) This is a free open source NOSQL document database with scalability and flexibility. Data are stored in flexible JSON-like documents.
+
+### Notes
 - To start your mongo instance run brew services start mongodb-community@7.0
 - To stop your mongo instance run brew services stop mongodb-community@7.0
+- To change to database instance on atlas, replace line 41 in server.js with
+- require("./config/db");
